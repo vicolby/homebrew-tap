@@ -5,23 +5,23 @@
 class June < Formula
   desc "Deterministic enforcement of code-guideline rules on the lines a change touches"
   homepage "https://github.com/vicolby/june"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   depends_on "ast-grep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vicolby/june/releases/download/v0.4.0/june_0.4.0_darwin_amd64.tar.gz"
-      sha256 "d9f43bd7dabafcaad6bf64b609fa19f34002a45d4c7070fa9164970e0a494fca"
+      url "https://github.com/vicolby/june/releases/download/v0.4.1/june_0.4.1_darwin_amd64.tar.gz"
+      sha256 "ee4dc5f3d7f3783959cc6fdce90406636bbd6079f913fb668ca38ef0b5d69d7f"
 
       define_method(:install) do
         bin.install "june"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vicolby/june/releases/download/v0.4.0/june_0.4.0_darwin_arm64.tar.gz"
-      sha256 "3265042b354ba5a831b4e2c178cfae55540674bbe2191338c600d2cf3160b53d"
+      url "https://github.com/vicolby/june/releases/download/v0.4.1/june_0.4.1_darwin_arm64.tar.gz"
+      sha256 "80e1b07e561ff5d36adcf790c4b7246256b18a09a470f017724b7745a636e6e8"
 
       define_method(:install) do
         bin.install "june"
@@ -31,15 +31,15 @@ class June < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vicolby/june/releases/download/v0.4.0/june_0.4.0_linux_amd64.tar.gz"
-      sha256 "b682641aa84e693584542b35db7f4cfafc317df0fd81d11e96b5dac5389c998b"
+      url "https://github.com/vicolby/june/releases/download/v0.4.1/june_0.4.1_linux_amd64.tar.gz"
+      sha256 "37a59cb51c4125356a087fe7ebbd0d1283dea43fc5a23a886b7a55d6448340d2"
       define_method(:install) do
         bin.install "june"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vicolby/june/releases/download/v0.4.0/june_0.4.0_linux_arm64.tar.gz"
-      sha256 "04b58efa91467433e39dde60432e17b8251c1abecf3df20b1c31235d772c57a8"
+      url "https://github.com/vicolby/june/releases/download/v0.4.1/june_0.4.1_linux_arm64.tar.gz"
+      sha256 "57e17a4d3e71be075c941d8558f355ac9ea826084900f59954b0c54fda897b68"
       define_method(:install) do
         bin.install "june"
       end
