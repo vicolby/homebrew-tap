@@ -5,14 +5,14 @@
 class June < Formula
   desc "Deterministic enforcement of code-guideline rules on the lines a change touches"
   homepage "https://github.com/vicolby/june"
-  version "0.2.1"
+  version "0.3.0"
 
   depends_on "ast-grep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vicolby/june/releases/download/v0.2.1/june_0.2.1_darwin_amd64.tar.gz"
-      sha256 "cc86239515a18417c3570d1465b4d7c46421c8d332eaa3e77fc26a7325a67ae8"
+      url "https://github.com/vicolby/june/releases/download/v0.3.0/june_0.3.0_darwin_amd64.tar.gz"
+      sha256 "fe8dbbc279331155cd0605703e19823a109bc28100cc281c5695f4641ebc9e08"
 
       define_method(:install) do
         bin.install "june"
@@ -20,8 +20,8 @@ class June < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vicolby/june/releases/download/v0.2.1/june_0.2.1_darwin_arm64.tar.gz"
-      sha256 "8aeb1345972a2613ec3c9fd5cf85429d83616e056a96703c8602e9cd955baf8e"
+      url "https://github.com/vicolby/june/releases/download/v0.3.0/june_0.3.0_darwin_arm64.tar.gz"
+      sha256 "745fae2c0d4780827418ae5581c96deb4515cc416a391825f86e1491b4f990c9"
 
       define_method(:install) do
         bin.install "june"
@@ -32,16 +32,16 @@ class June < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vicolby/june/releases/download/v0.2.1/june_0.2.1_linux_amd64.tar.gz"
-      sha256 "3d0423896ca39b841fc1f1ba1f9cbeac3ee83e47ea56ba2d87b0bf05f6bb9919"
+      url "https://github.com/vicolby/june/releases/download/v0.3.0/june_0.3.0_linux_amd64.tar.gz"
+      sha256 "1beb708c45b02d411f731f1907f398d38bde549231cfcab34733c851c617a154"
       define_method(:install) do
         bin.install "june"
         (share/"june").install "rules"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vicolby/june/releases/download/v0.2.1/june_0.2.1_linux_arm64.tar.gz"
-      sha256 "3d4d965cc6f1755235c77299917faeb6af042e00e1c7859d8f01bdc50bfb0ac0"
+      url "https://github.com/vicolby/june/releases/download/v0.3.0/june_0.3.0_linux_arm64.tar.gz"
+      sha256 "b9e62af89c8b2781929e0d8fb4b970551ab67258c7290c17ec48191bbf84db43"
       define_method(:install) do
         bin.install "june"
         (share/"june").install "rules"
